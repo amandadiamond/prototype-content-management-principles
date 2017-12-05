@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
+<!--<![endif]-->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Writing for GOV.UK - Content design: planning, writing and managing content - Guidance - GOV.UK</title>
+
+    <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-2775f99eaec64ff8121bfbfb3eb67b0c2b4b7c3fc78d25da30e12db2a09d30d6.css" crossorigin="anonymous" integrity="sha256-J3X5nq7GT/gSG/v7PrZ7DCtLfD/HjSXaMOEtsqCdMNY=">
+<!--<![endif]-->
+    <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie6-5bb08c355a12ac38b0ac9d2446da122ec0f81c78e02dcd2a98766f53c23793c8.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie7-be1ea757827710f20eae59ae3ebfd172b7dbeabb171a79945ba610947eebb3cc.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie8-5ab4d0c7b42f2bf10f8c7aadf331a11f7399be832b0ee2c68c94071195a1e36e.css" /><![endif]-->
+    <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/govuk-template-print-1076519521c2fffbbf75ab3b0d3b32ee2d96ac7e9778f1cdfac1771eefd1a1c0.css" crossorigin="anonymous" integrity="sha256-EHZRlSHC//u/das7DTsy7i2WrH6XePHN+sF3Hu/RocA=">
+
+    <!--[if IE 8]><link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-ie8-f5e3c18a96ecb0f37246556a27330202d6e18feffa05a3b67825024609629ac8.css" /><![endif]-->
+    <!--[if gte IE 9]><!--><link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-5ff8c53913434afd0072a480d7cfca67cace4c8d03f6ef96b78a4455728ce745.css" crossorigin="anonymous" integrity="sha256-X/jFORNDSv0AcqSA18/KZ8rOTI0D9u+Wt4pEVXKM50U=">
+<!--<![endif]-->
+    <!--[if lt IE 9]><script src="https://assets.publishing.service.gov.uk/static/ie-75db9d4df4993de5335d6e49013362743a78107245bcf6543337a0ecc0a95b41.js" crossorigin="anonymous" integrity="sha256-ddudTfSZPeUzXW5JATNidDp4EHJFvPZUMzeg7MCpW0E="></script><![endif]-->
+
+    <link rel="shortcut icon" href="https://assets.publishing.service.gov.uk/static/favicon-8d811b8c3badbc0b0e2f6e25d3660a96cc0cca7993e6f32e98785f205fc40907.ico" type="image/x-icon">
+    <link rel="mask-icon" href="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown-de738c3fcce8ce2a91b67e89787090dc24a5cda0275ab6b75f6226c5b9619d3d.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-180x180-ea1cbb1cbbeddfff275dfa6e8e46b84cd530892df79dc4882a8f99b802b49a90.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-167x167-181e404a50c572923285fb83f0fbd78da6b4e38e3ce52f8e6b8e29da8586450a.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-152x152-02457fcdcee8d309276305af2233d41bfb8fd055e855727d355e61bce7ffa9bb.png">
+    <link rel="apple-touch-icon" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-a318f305290c523aed80082456175b46c95350c0eeac93f42e78a71c7a55544e.png">
+
+    <meta name="theme-color" content="#0b0c0c">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://assets.publishing.service.gov.uk/static/opengraph-image-a1f7d89ffd0782738b1aeb0da37842d8bd0addbd724b8e58c3edbc7287cc11de.png">
+
+      <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-7da20ae18cf7127910ec59331f75ffed6f00cff1969dc9366894e01ffa56a2da.css" crossorigin="anonymous" integrity="sha256-faIK4Yz3EnkQ7FkzH3X/7W8Az/GWnck2aJTgH/pWoto=">
+<!--<![endif]-->
+<!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie6-91e47d8adde0b3b628a6ed931338a16655c4a79c5bba5cdb7f6389f1f077b63c.css" /><script>var ieVersion = 6;</script><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie7-04243275a77f0c908ff266e33890a959888bad90ec0be5857456866ab86e059b.css" /><script>var ieVersion = 7;</script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie8-fac25ec78515a5484990fb50fada4cd02304969d4e279ba91562a8ff91d4d8e8.css" /><script>var ieVersion = 8;</script><![endif]-->
+
+<link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/core-layout-print-17ae04fa41ad116c2d3a329800a3160d98adf170d561703b3836dad57f2b994d.css" crossorigin="anonymous" integrity="sha256-F64E+kGtEWwtOjKYAKMWDZit8XDVYXA7ODba1X8rmU0=">
+
+
+  <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/manuals-frontend/application-f947a6eebaf010dddbb63fa0b9928f03736b46f59db85892cc723152e29b4723.css">
+<!--<![endif]--><link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/manuals-frontend/print-207a5ee0c5baa892245acaa5147b2104bd582d8c1a37559c87c3272372fab259.css">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="R6C7wqmlp1VzZCET9WQBoe+jQhmvulE9Z1H7jy0ExiJANdjAsCWzjyMmU8pLX+UeWf1uztSIpyx8AVzkGz4mXA==">
+<meta name="description" content="Planning and managing digital content to meet the needs the public has of government.">
+<!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/manuals-frontend/application-ie6-f6acd006699e7d8d92590c0b90cdee52daa9c77b65c6a299b7feed92d533a87b.css" /><script>var ieVersion = 6;</script><![endif]--><!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/manuals-frontend/application-ie7-f6acd006699e7d8d92590c0b90cdee52daa9c77b65c6a299b7feed92d533a87b.css" /><script>var ieVersion = 7;</script><![endif]--><!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/manuals-frontend/application-ie8-742bd52775ed5a1313f1bf0655b525748d68480e6258aed92210bc6449cd43e6.css" /><script>var ieVersion = 8;</script><![endif]--><meta name="govuk:rendering-application" content="manuals-frontend">
+</head>
+
+  <body>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    
+
+    <div id="skiplink-container">
+      <div>
+        <a href="#content" class="skiplink">Skip to main content</a>
+      </div>
+    </div>
+
+    <div id="global-cookie-message">
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+    </div>
+
+    <header role="banner" id="global-header" class="">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.gov.uk" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown_invert_trans-203e1db49d3eff430d7dc450ce723c1002542fe1d2bce661b6d8571f14c1043c.png" width="36" height="32" alt=""> GOV.UK
+            </a>
+          </div>
+            
+
+  
+
+        </div>
+        
+      </div>
+    </header>
+
+      <div id="user-satisfaction-survey-container"></div>
+
+
+    <div id="global-header-bar"></div>
+
+      <div id="wrapper">
+    <main role="main" class="hmrc-internal-manuals-frontend-content outer-block">
+      <div id="manuals-frontend" class="manuals-frontend-body inner-block">
+        
+
+<header aria-labelledby="manual-title" class="">
+
+  <div class="primary">
+
+    <h1 id="manual-title">Content design: planning, writing and managing content</h1>
+    <div class="govuk-metadata" data-module="toggle">
+  <dl data-module="track-click">
+      <dt>From:</dt>
+      <dd>
+          <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
+
+      </dd>
+      <dt>Published:</dt>
+      <dd><time datetime="2016-02-29">29 February 2016</time></dd>
+          <dt>Updated:</dt>
+          <dd>
+              <time datetime="2017-09-22">22 September 2017</time>, <a href="/guidance/content-design/updates">see all updates</a>
+
+          </dd>
+  </dl>
+</div>
+
+
+    <div class="in-manual-search">
+      <form action="/search">
+        <label for="search-box">Search this manual</label>
+        <input type="hidden" name="filter_manual[]" value="/guidance/content-design">
+        <input id="search-box" class="in-manual-search-box" type="text" name="q">
+        <button type="submit">search</button>
+      </form>
+    </div>
+  </div>
+  <div class="secondary">
+    <div class="secondary-inner">
+      <p>
+        <a class="feedback" href="https://www.gov.uk/contact/govuk">Give feedback about this page</a>
+      </p>
+    </div>
+  </div>
+</header>
+
+<ol class="breadcrumb-trail">
+    <li><a href="/guidance/content-design">Contents</a></li>
+
+    <li class="last-child">Writing for GOV.UK</li>
+</ol>
+
+<div class="manual-body" id="content">
+  <article aria-labelledby="section-title">
+    <h1 id="section-title" class="section-title">Writing for GOV.UK</h1>
+    <p class="summary">How to write well for your audience, including specialists.</p>
+        <div class="js-collapsible-collection subsection-collection" data-collapse-depth="1">
+          <div class="collapsible-subsections">
+            
+<div class="govuk-govspeak rich-govspeak">
+  <h2 id="writing-well-for-the-web">Writing well for the web</h2>
+
+<p><a rel="external" href="http://www.nngroup.com/articles/how-users-read-on-the-web/">People read differently on the web</a> than they do on paper. This means that the best approach when writing for the web is different from writing for print.</p>
+
+<p>Our guidance on writing for GOV.UK is based on research into how people read online and how people use GOV.UK. It explains what each rule is based on.</p>
+
+<p>When you write for GOV.UK you should:</p>
+
+<ul>
+  <li>use writing for the web best practice</li>
+  <li>follow the <a href="/guidance/style-guide">Government Digital Service (GDS) style guide</a> and writing guidance</li>
+</ul>
+
+<h3 id="meet-the-user-need">Meet the user need</h3>
+
+<p>Don’t publish everything you can online. Publish only what someone needs to know so they can complete their task. Nothing more.</p>
+
+<p>People don’t usually read text unless they want information. When you write for the web, start with the same question every time: what does the user want to know?</p>
+
+<p>Meeting that need means being:</p>
+
+<ul>
+  <li>specific</li>
+  <li>informative</li>
+  <li>clear and to the point</li>
+</ul>
+
+<h3 id="finding-information-on-the-web">Finding information on the web</h3>
+
+<p>An individual’s process of finding and absorbing information on the web should follow these steps.</p>
+
+<ol>
+  <li>
+    <p>I have a question</p>
+  </li>
+  <li>
+    <p>I can find the page with the answer easily – I can see it’s the right page from the search results listing</p>
+  </li>
+  <li>
+    <p>I have understood the information</p>
+  </li>
+  <li>
+    <p>I have my answer</p>
+  </li>
+  <li>
+    <p>I trust the information</p>
+  </li>
+  <li>
+    <p>I know what to do next/my fears are allayed/I don’t need anything else</p>
+  </li>
+</ol>
+
+<p>A website only works if people can find what they need quickly, complete their task and leave without having to think about it too much.</p>
+
+<h3 id="good-content-is-easy-to-read">Good content is easy to read</h3>
+
+<p>Good online content is easy to read and understand.</p>
+
+<p>It uses:</p>
+
+<ul>
+  <li>short sentences</li>
+  <li>sub-headed sections</li>
+  <li>simple vocabulary</li>
+</ul>
+
+<p>This helps people find what they need quickly and absorb it effortlessly.</p>
+
+<p>The main purpose of GOV.UK is to provide information - there’s no excuse for putting unnecessarily complicated writing in the way of people’s understanding.</p>
+
+<h2 id="writing-specialists">Writing well for specialists</h2>
+
+<p>Government experts often say that because they’re writing technical or complex content for a specialist audience, they don’t need to use plain English. This is wrong.</p>
+
+<p><a rel="external" href="https://gds.blog.gov.uk/2014/02/17/guest-post-clarity-is-king-the-evidence-that-reveals-the-desperate-need-to-re-think-the-way-we-write/">Research</a> shows that higher literacy people prefer plain English because it allows them to understand the information as quickly as possible.</p>
+
+<p>For example, <a rel="external" href="http://works.bepress.com/cgi/viewcontent.cgi?article=1000&amp;context=christopher_trudeau">research</a> into use of specialist legal language in legal documents found:</p>
+
+<ul>
+  <li>80% of people preferred sentences written in clear English - and the more complex the issue, the greater that preference (eg, 97% preferred ‘among other things’ over the Latin ‘inter alia’)</li>
+  <li>the more educated the person and the more specialist their knowledge, the greater their preference for plain English</li>
+</ul>
+
+<p>People understand complex specialist language, but don’t want to read it if there’s an alternative. This is because people with the highest literacy levels and the greatest expertise tend to have the most to read. They don’t have time to pore through reams of dry, complicated prose.</p>
+
+<h3 id="technical-terms">Technical terms</h3>
+
+<p>Where you need to use technical terms, you can. They’re not jargon. You just need to explain what they mean the first time you use them.</p>
+
+<h3 id="legal-content">Legal content</h3>
+
+<p>Legal content can still be written in plain English. It’s important that users understand content and that we present complicated information simply.</p>
+
+<p>If you have to publish legal jargon, it will be a publication so you’ll be writing a plain English summary.</p>
+
+<p>Where evidence shows there’s a clear user need for including a legal term, eg ‘bona vacantia’, always explain it in plain English.</p>
+
+<p>If you’re talking about a legal requirement, use ‘must’. For example, ‘your employer must pay you the National Minimum Wage (NMW)’.</p>
+
+<p>If you feel that ‘must’ doesn’t have enough emphasis, then use ‘legal requirement’, ‘legally entitled’ etc. For example: ‘Once your child is registered at school, you’re legally responsible for making sure they attend regularly’.</p>
+
+<p>When deciding whether to use ‘must’ or ‘legally entitled’ etc, consider how important it is for us to talk about the legal aspect, as well as the overall tone of voice.</p>
+
+<p>If a requirement is legal, but administrative, or part of a process that won’t have criminal repercussions, then use: ‘need to’. For example: ‘You will need to provide copies of your marriage certificate’.</p>
+
+<p>This may be a legal requirement, but not completing it would just stop the person from moving on to the next stage of a process, rather than committing a more serious offence.</p>
+
+<h4 id="footnotes-and-legal-language">Footnotes and legal language</h4>
+
+<p>Don’t use footnotes on documents. They’re designed for reference in print, not web pages. Always consider the user need first. If the information in the footnotes is important, include it in the body text. If it’s not, leave it out.</p>
+
+<h2 id="know-your-audience">Know your audience</h2>
+
+<p>Your writing will be most effective if you understand who you’re writing for.</p>
+
+<p>To understand your audience you should know:</p>
+
+<ul>
+  <li>how they behave, what they’re interested in or worried about - so your writing will catch their attention and answer their questions</li>
+  <li>their vocabulary - so that you can use the same terms and phrases they’ll use to search for content</li>
+</ul>
+
+<p>When you have more than one audience, make your writing as easy to read as possible so it’s accessible to everyone.</p>
+
+<h3 id="the-govuk-audience">The GOV.UK audience</h3>
+
+<p>The GOV.UK audience is potentially anyone living in the UK who needs information about their government, or people abroad who want to do business in or travel to the UK. This means government must communicate in a way that most people understand.</p>
+
+<p>The best way to do this is by using common words and working with natural reading behaviour.</p>
+
+<p>If you’re writing for a specialist audience, you still need to make sure everyone can understand what the content is about.</p>
+
+<h2 id="how-people-read">How people read</h2>
+
+<p>Knowing how people read means you’ll write in a way they can understand easily and quickly - so you don’t waste their time.</p>
+
+<p>All of this guidance is based on the learning skills of an average person in the UK, who speaks English as their first language. This guidance also applies when you’re <a href="#writing-specialists">writing for specialists</a>.</p>
+
+<h3 id="common-words">Common words</h3>
+
+<p>By the time a child is 5 or 6 years old, they’ll use 2,500 to 5,000 common words. Adults still find these words easier to recognise and understand than words they’ve learned since.</p>
+
+<p>By age 9, you’re building up your ‘common words’ vocabulary. Your primary set is around 5,000 words; your secondary set is around 10,000 words. You use these words every day.</p>
+
+<h3 id="use-short-words-instead-of-long-words">Use short words instead of long words</h3>
+
+<p>When you use a longer word (8 or 9 letters), users are more likely to skip shorter words (3, 4 or 5 letters) that follow it. So if you use longer, more complicated words, readers will skip more. Keep it simple.</p>
+
+<p>For example:</p>
+
+<p>“The recently implemented categorical standardisation procedure on waste oil should not be applied before 1 January 2015.”</p>
+
+<p>The ‘not’ is far more obvious in this:</p>
+
+<p>“Do not use the new waste oil standards before 1 January 2015.”</p>
+
+<h3 id="reading-skills">Reading skills</h3>
+
+<p>Children quickly learn to read common words (the 5000 words they use most). They then stop reading these words and start recognising their shape. This allows people to read much faster. Children already read like this by the time they’re 9 years old.</p>
+
+<p>People also don’t read one word at a time. They bounce around - especially online. They anticipate words and fill them in.</p>
+
+<p>Your brain can drop up to 30% of the text and still understand. Your vocabulary will grow but this reading skill stays with you as an adult. You don’t need to read every word to understand what is written.</p>
+
+<p>This is why we tell people to write on GOV.UK for a 9 year old reading age.</p>
+
+<h3 id="explaining-the-unusual">Explaining the unusual</h3>
+
+<p>We explain all unusual terms on GOV.UK. This is because you can understand 6-letter words as easily as 2-letter words – if they’re in context. If the context is right, you can read a short word faster than a single letter.</p>
+
+<p>By giving full information and using common words, we’re helping people speed up their reading and understand information in the fastest possible way.</p>
+
+<h3 id="short-sentences">Short sentences</h3>
+
+<p>People with some learning disabilities read letter for letter - they don’t bounce around like other users.
+They also can’t fully understand a sentence if it’s too long.</p>
+
+<p>People with moderate learning disabilities can understand sentences of 5 to 8 words without difficulty. By using common words we can help all users understand sentences of around 25 words.</p>
+
+<h3 id="capital-letters-are-harder-to-read">Capital letters are harder to read</h3>
+
+<p>When you learn to read, you start with a mix of upper and lower case but you don’t start understanding uppercase until you’re around 6 years old.</p>
+
+<p>At first, you may sound out letters, merge sounds, merge letters and so learn the word.</p>
+
+<p>Then you stop reading it.</p>
+
+<p>At that point, you recognise the shape of the word. This speeds up comprehension and speed of reading.</p>
+
+<p>As writers, we don’t want people to read. We want people to recognise the ‘shape’ of the word and understand. It’s a lot faster.</p>
+
+<p>Capital letters are reputed to be 13 to 18% harder for users to read. So we try to avoid them.</p>
+
+<p>Block capitals indicate shouting in common online usage. We are government. We should not be shouting.</p>
+
+<h3 id="ampersands-can-be-hard-to-understand">Ampersands can be hard to understand</h3>
+
+<p>Ampersands are allowed in logos – the pictorial logo at the top of an organisation page – but not in body copy.</p>
+
+<p>The reason is that ‘and’ is easier to read and easier to skim. Some people with lower literacy levels also find ampersands harder to understand. As government, we can’t exclude users in any way.</p>
+
+<h3 id="how-users-read-web-pages">How users read web pages</h3>
+
+<p>Users read very differently online than on paper. They don’t necessarily read top to bottom or even from word to word.</p>
+
+<p>Instead, <a rel="external" href="http://www.nngroup.com/articles/how-little-do-users-read/">users only read about 20 to 28% of a web page</a>. Where users just want to complete their task as quickly as possible, they skim even more out of impatience.</p>
+
+<p>Web-user eye-tracking studies show that people tend to ‘read’ a webpage in an <a rel="external" href="http://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/">‘F’ shape pattern</a>. They look across the top, then down the side, reading further across when they find what they need.</p>
+
+<p>What this means is: put the the most important information first. So we talk a lot about ‘front-loading’ sub-headings, titles and bullet points.</p>
+
+<p>For example, say ‘Canteen menu’, not ‘What’s on the menu at the canteen today?’</p>
+
+<h4 id="good-example">Good example</h4>
+
+<p>At the activity centre you can:</p>
+
+<ul>
+  <li>swim</li>
+  <li>play</li>
+  <li>run</li>
+</ul>
+
+<h4 id="bad-example">Bad example</h4>
+
+<p>At the activity centre:</p>
+
+<ul>
+  <li>you can swim</li>
+  <li>you can play</li>
+  <li>you can run</li>
+</ul>
+
+<h2 id="titles-and-summaries">Titles and summaries</h2>
+
+<p>Most people who use GOV.UK start with a search engine. Use the same vocabulary as your audience so they can find your content. This starts with your page title, summary and first paragraph.</p>
+
+<p>If people can’t find your page, they won’t read your content.</p>
+
+<h3 id="how-to-optimise-content">How to optimise content</h3>
+
+<ol>
+  <li>Find out what the public calls your content <a href="/guidance/content-design/data-and-analytics#popular-keywords-seo">by using search tools to look up keywords</a>. Your scheme, organisation or process’s official or internal name may not be what the public calls it.</li>
+  <li>Check <a href="/guidance/content-design/data-and-analytics#search-on-govuk">searches on GOV.UK</a> for any related content . This can tell you what people are struggling to find.</li>
+  <li>Once you know the most popular keywords you can prioritise them in the title, summary, introduction and subheadings</li>
+</ol>
+
+<p>This is called search engine optimisation (SEO). Search engines return results based on how closely the content appears to match the person’s search term.</p>
+
+<h4 id="example">Example</h4>
+
+<p>In 2001 Bereavement Allowance replaced Widow’s Pension. Search tools show that many people still look for Widow’s Pension even now, so this was included in the title of the <a href="/bereavement-allowance/overview">Bereavement Allowance guide</a> on GOV.UK.</p>
+
+<h3 id="answer-the-users-question-in-the-summary">Answer the user’s question in the summary</h3>
+
+<p>People will easily find well-optimised content. If you have a simple answer to a question, put it in the summary. This means users don’t need to leave Google (or whatever search engine they choose to use) to get their information.</p>
+
+<p>GOV.UK’s goal isn’t ‘high traffic’, it’s ‘the right traffic’.</p>
+
+<h4 id="example-1">Example</h4>
+
+<p>Most people want to know the cost of a passport before they apply. We’ve put the price in the summary so <a rel="external" href="https://www.google.co.uk/?gfe_rd=cr&amp;ei=qJQtVMjcBMOCVLXzgMAP&amp;gws_rd=ssl#q=cost+uk+passport">it shows in the search results.</a></p>
+
+<h3 id="titles">Titles</h3>
+
+<p>Think about how the title will look in search on GOV.UK and on search engines.</p>
+
+<ol>
+  <li>Keep all titles to 65 characters or less (including spaces). This is because search engines truncate (cut off) titles in Google search results over that number. Words or parts of words will be cut off. That’s why Whitehall Publisher shows a warning if you go past this limit.</li>
+  <li>Make sure your title is unique. It’s not helpful for people if search results show a list of pages with the exact same title.
+If there are a number of pages with a repeated phrase in the title (eg ‘Import and export regulations for the automotive sector’, ‘Import and export regulations for the chemical sector’) change the title so that the most important area is front-loaded, eg ‘Automotive sector: import and export regulations’ or ‘Chemical sector: import and export regulations’. This is more descriptive and useful for search.</li>
+  <li>Titles should be clear and descriptive. The title should provide full context so that people can easily see if they’ve found what they’re looking for, eg ‘Guidance for potato growers’, not ‘Potatoes’.</li>
+  <li>Front-load your titles. The most important information and the words the user is mostly likely to have searched should be at the beginning of the search result.</li>
+  <li>Make titles active where possible - avoid gerunds and participles eg ‘Submit Statutory Declarations’ not ‘Using and submitting Statutory Declarations’.</li>
+  <li>If you need to use a separator to break up long title, use a colon (it helps users to scan).  Eg ‘Planning appeal procedures: technical review’ works better than ‘Technical review of planning appeal procedures’.</li>
+  <li>Only use an acronym in the title if it is a commonly used search term (like EU).</li>
+  <li>Avoid puns or wordplay since these can make the content difficult to find.</li>
+</ol>
+
+<p>Good example:
+‘Income Tax reform: impact assessment’</p>
+
+<p>Bad example:
+‘An assessment of the impact of proposed reforms to Income Tax’</p>
+
+<h3 id="summaries">Summaries</h3>
+
+<p>Along with the title, the summary is usually what users see in search results. Make sure people can see quickly whether this page will have the information they want.</p>
+
+<ol>
+  <li>Keep all summaries to 160 characters (including spaces) as Google usually only shows the first 160 characters in search results. Make sure you cover the main point of the page in the first 160 characters of the summary.</li>
+  <li>Summaries should end with a full stop. It can help people who use assistive technology like screen readers.</li>
+  <li>Keep summaries active and include a verb.</li>
+  <li>Include keywords - especially ones you haven’t included in the page title.</li>
+  <li>Use <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk#plain-english">plain English</a> (don’t use words like ‘require’ or ‘obtain’)</li>
+  <li>Only use acronyms if they are very common, such as EU and NATO.</li>
+</ol>
+
+<h2 id="structuring-content">Structuring your content</h2>
+
+<h3 id="page-length">Page length</h3>
+
+<p>There is no minimum or maximum page length for GOV.UK. However:</p>
+
+<ul>
+  <li>
+<a rel="external" href="http://www.nngroup.com/articles/how-little-do-users-read/">people only read 20 to 28% of text on a web page</a> anyway</li>
+  <li>remember that the pressure on the brain to understand increases for every 100 words you put on a page</li>
+</ul>
+
+<p>This means that the quicker you get to the point, the greater the chance your target audience will see the information you want them to.</p>
+
+<p>It’s most important that you write well.  If you write only a single paragraph but it’s full of caveats, jargon and things users don’t need to know (but you want to say) then it’s still too much.</p>
+
+<h3 id="writing-body-copy">Writing body copy</h3>
+
+<p>Keep your body copy as focused as possible.</p>
+
+<p>Remember that you’re likely to be battling outside factors for people’s attention, not least their mood and situation. They might be looking on a mobile on a train, trying to complete their task online in the middle of a stressful family event or any combination of multiple unknowns. If you want their attention, don’t waste their time.</p>
+
+<ol>
+  <li>Don’t repeat the summary in the first paragraph.</li>
+  <li>Use the ‘<a rel="external" href="http://www.nngroup.com/articles/inverted-pyramids-in-cyberspace/">inverted pyramid</a>’ approach with the most important information at the top tapering down to lesser detail.</li>
+  <li>Break up text with descriptive subheadings. The text should still make sense with the subheadings removed.</li>
+  <li>Paragraphs should have no more than 5 sentences each.</li>
+  <li>Includes keywords to boost natural search rankings.</li>
+</ol>
+
+<h3 id="sub-headings">Sub-headings</h3>
+
+<p>Make sure your sub-headings are front-loaded with search terms and make them active.</p>
+
+<p>Don’t use:</p>
+
+<ul>
+  <li>gerunds, eg ‘Apply for a licence’ not ‘Applying for a licence’</li>
+  <li>questions</li>
+  <li>technical terms unless you’ve already explained them</li>
+  <li>‘introduction’ as your first section – users don’t want an introduction, just give the most important information</li>
+</ul>
+
+<h3 id="dont-use-faqs">Don’t use FAQs</h3>
+
+<p>FAQs are strongly discouraged on GOV.UK. If you write content by starting with user needs, you won’t need to use FAQs.</p>
+
+<p>FAQs are discouraged because they:</p>
+
+<ul>
+  <li>duplicate other content on the site</li>
+  <li>can’t be front-loaded (putting the most important words people will search for), which makes usability difficult</li>
+  <li>are usually not frequently asked questions by the public, but important information dumped by the content editor</li>
+  <li>mean that content is not where people expect to find it; it needs to be in context</li>
+  <li>can add to search results with duplicate, competing text</li>
+</ul>
+
+<p>If your call-centres get questions that really are frequently asked, <a rel="external" href="https://support.production.alphagov.co.uk">get in touch</a> and GDS will help find a way to take care of those user needs.</p>
+
+<h2 id="writing-to-govuk-style">Writing to GOV.UK style</h2>
+
+<p>It’s important to stick to <a href="/guidance/style-guide">the style guide</a>. The style guide is based on a lot of user testing.</p>
+
+<p>GDS commissioned <a href="https://www.gov.uk/government/publications/govuk-content-principles-conventions-and-research-background">research on the impact of style guides</a>. Have a look.</p>
+
+<h3 id="be-concise">Be concise</h3>
+
+<p>To keep content understandable, concise and relevant, it should be:</p>
+
+<ul>
+  <li>specific</li>
+  <li>informative</li>
+  <li>clear and concise</li>
+  <li>brisk but not terse</li>
+  <li>incisive (friendliness can lead to a lack of precision and unnecessary words) – but remain human (not a faceless machine)</li>
+  <li>serious but not pompous</li>
+  <li>emotionless – adjectives can be subjective and make the text sound more emotive and like spin</li>
+</ul>
+
+<p>You should:</p>
+
+<ul>
+  <li>use contractions (eg can’t)</li>
+  <li>not let caveats dictate unwieldy grammar – eg say ‘You can’ rather than ‘You may be able to’</li>
+  <li>use the language people are using – use <a rel="external" href="http://www.google.com/trends/explore#cmpt=q">Google Trends</a> to check for terms people search for</li>
+  <li>not use long sentences – check any sentences with more than 25 words to see if you can split them to make them clearer</li>
+</ul>
+
+<p>(Note: words ending in ‘–ion’ and ‘–ment’ tend to make sentences longer and more complicated than they need to be.)</p>
+
+<h3 id="active-voice">Active voice</h3>
+
+<p>Use the active rather than passive voice. This will help us write concise, clear content.</p>
+
+<h3 id="addressing-the-user">Addressing the user</h3>
+
+<p>Address the user as ‘you’ where possible. Content on the site often makes a direct appeal to citizens and businesses to get involved or take action, eg ‘You can contact HMRC by phone and email’ or ‘Pay your car tax’.</p>
+
+<h3 id="capitalisation">Capitalisation</h3>
+
+<p>DON’T USE BLOCK CAPITALS FOR LARGE AMOUNTS OF TEXT. IT’S HARD TO READ.</p>
+
+<h3 id="contractions">Contractions</h3>
+
+<p>Use contractions eg can’t, you’ll. Some organisations are reluctant to use them but we’ve never encountered a problem with understanding when testing with users.</p>
+
+<p>Sometimes, lots of ‘cannot’, ‘should not’ etc can seem archaic and formal. That’s a tone we can move away from without jeopardising the overall tone of information coming from government.</p>
+
+<h3 id="date-ranges">Date ranges</h3>
+
+<p>Use ‘to’ instead of a dash or slash in date ranges. ‘To’ is quicker to read than a dash, and it’s easier for screen readers.</p>
+
+<p>Always explain what your date range represents, eg ‘tax year 2013 to 2014’ or ‘September 2013 to July 2014’. Date ranges can be the academic year, calendar year or tax year. This is why date ranges must be very, very clear.</p>
+
+<p>If you’re comparing statistics from 2 different tax or financial years, use ‘Comparing the financial year ending 2011 with that ending 2012, there was a 9% decrease’.</p>
+
+<p>GOV.UK gets over 50 million visits a month. There is no guarantee that only your intended audience will find your content, or that everyone will understand what you mean.</p>
+
+<p>But we can make sure we get as close to accessible for everyone as we possibly can, simply by being very, very clear.</p>
+
+<h3 id="gender-neutral-text">Gender-neutral text</h3>
+
+<p>Make sure text is gender neutral wherever possible. Use ‘them’, ‘their’, ‘they’ etc.</p>
+
+<h3 id="links">Links</h3>
+
+<p>Front-load your link text with the relevant terms and make them active and specific. Always link to online services first. Offer offline alternatives afterwards (where possible).</p>
+
+<h3 id="plain-english">Plain English</h3>
+
+<p>Plain English is mandatory for all of GOV.UK. One of the parts most people pick up on is the <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#words-to-avoid">plain English (or words to avoid) list</a>.</p>
+
+<p>This isn’t just a list of words to avoid. Plain English is the whole ethos of GOV.UK: it’s a way of writing.</p>
+
+<p>The list isn’t exhaustive. It’s an indicator to show you the sort of language that confuses users.</p>
+
+<p>Don’t use formal or long words when easy or short ones will do. Use ‘buy’ instead of ‘purchase’, ‘help’ instead of ‘assist’, and ‘about’ instead of ‘approximately’.</p>
+
+<p>We also lose trust from people if we write government ‘buzzwords’ and jargon. Often, these words are too general and vague and can lead to misinterpretation or empty, meaningless text. We can do without these words.</p>
+
+<p>With all of these words you can generally get rid of them by breaking the term into what you’re actually doing. Be open and specific.</p>
+
+<p>Write conversationally – picture your audience and write as if you were talking to them one-to-one but with the authority of someone who can actively help.</p>
+
+<h3 id="writing-about-disability">Writing about disability</h3>
+
+<p><a href="https://www.gov.uk/government/publications/inclusive-communication">Words to use and avoid when writing about disability</a>.</p>
+
+<h3 id="when-to-use-we">When to use ‘we’</h3>
+
+<p>In the ‘about us’ section of the organisation page, lead with ‘we’ – it will be very obvious who the ‘we’ is on this page.</p>
+
+<p>In policies, ‘we’ is also used, for example, ‘We announced our intention to do x as part of the coalition agreement.’</p>
+
+<p>However, it’s not obvious who ‘we’ is in all content. For example, in a publication or detailed guide, users might enter the content in the middle of a page. They could arrive at an H2 heading from the navigation bar on the side, or skim read from the top until they find the section they want.</p>
+
+<p>Using ‘we’ is fine, as long as you’re making it clear as much as possible who the ‘we’ is. Don’t assume the audience will know. Each time you use ‘we’, make sure you’ve already used the full name of the department or agency in that specific section.</p>
+
+<h2 id="after-publication">After publication</h2>
+
+<h3 id="check-your-content-is-working-for-your-users">Check your content is working for your users</h3>
+<p>You should regularly confirm that your content works for your users. You can check:</p>
+
+<ul>
+  <li>on page searches in analytics (often an indication people didn’t find what they were looking for on that page)</li>
+  <li>how users got to your page and where they clicked next (are they going where you expected or wanted them to?)</li>
+  <li>user feedback left on GOV.UK through the <a rel="external" href="https://support.preview.alphagov.co.uk/anonymous_feedback/explore">Feedback Explorer</a>
+</li>
+  <li>feedback from any offline channels, eg helplines</li>
+</ul>
+
+<h2 id="change-notes">Change notes</h2>
+
+<p>When you edit or change a document, write what’s changed in the ‘Change note’ field - this is publicly viewable. Change notes should only include factual changes that specifically affect the user in the task which they’re trying to perform.</p>
+
+<p>Change notes will trigger an <a href="/guidance/content-design/content-types#email-alerts">email alert</a> to everyone who’s subscribed to the sub-topic the publication is tagged to.</p>
+
+<p>Use change notes to tell users:</p>
+
+<ul>
+  <li>what has changed</li>
+  <li>who is affected</li>
+  <li>any agencies, departments or organisations that are responsible for the change</li>
+</ul>
+
+<p>Don’t use changes notes for telling users:</p>
+
+<ul>
+  <li>about minor editorial corrections or layout issues</li>
+</ul>
+
+<h3 id="how-to-write-a-change-note">How to write a change note</h3>
+
+<p>Focus on why the page has been changed. Concentrate on any new actions that the user may have to perform. This includes any penalties or charges they need to be aware of when performing a task. Don’t include date of change to document as that will automatically change.</p>
+
+<p>Try to avoid phrases like ‘This page has been updated to include…’. Enter something short but useful, make it a clear statement of what’s happened.. For example:</p>
+
+<p>‘Potatoes have been added to the banned vegetable import list from outside the EU.’</p>
+
+<p>If the change on the page is sign-posting an upcoming issue, the change note should also reflect that. For example:</p>
+
+<p>‘From 1 January 2015, VAT paid on digital services will depend on the country the customer is in, not the supplier of the service.’</p>
+
+<p>Once the change has happened, the new change note should read similar to:</p>
+
+<p>‘VAT paid on digital services now depends on the country the customer is in, not the supplier of the service.’</p>
+
+<p>Change notes will trigger an email alert to users who are subscribed to alerts including policy, policy areas, topic, sub topic and filtered publications.</p>
+
+<p>Users can read change notes by clicking ‘see all updates’ and then ‘full page history’.</p>
+
+</div>
+
+          </div>
+        </div>
+  </article>
+</div>
+
+
+        <div class="print-page">
+          <a onclick="window.print();return false;" href="#">Print this page</a>
+        </div>
+      </div>
+    </main>
+  <div class="report-a-problem-container">
+  <div class="report-a-problem-inner">
+    <div class="report-a-problem-content">
+      <h2>Help us improve GOV.UK</h2>
+      <form accept-charset="UTF-8" action="/contact/govuk/problem_reports" method="post">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+        <input id="url" name="url" type="hidden" value="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">
+        
+          <input id="source" name="source" type="hidden" value="">
+        
+        
+          <input id="page_owner" name="page_owner" type="hidden" value="">
+        
+
+        <p>Don’t include personal or financial information like your National Insurance number or credit card details.</p>
+
+        <label for="what_doing">What you were doing</label>
+        <input id="what_doing" name="what_doing" type="text">
+
+        <label for="what_wrong">What went wrong</label>
+        <input id="what_wrong" name="what_wrong" type="text">
+
+        <div class="button-wrapper">
+          <button name="commit" type="submit" class="button">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+
+      <div class="footer-wrapper">
+            <div class="footer-categories">
+      <div class="footer-explore">
+        <h2>Services and information</h2>
+
+        <ul>
+          <li><a href="/browse/benefits">Benefits</a></li>
+          <li><a href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a></li>
+          <li><a href="/browse/business">Business and self-employed</a></li>
+          <li><a href="/browse/childcare-parenting">Childcare and parenting</a></li>
+          <li><a href="/browse/citizenship">Citizenship and living in the UK</a></li>
+          <li><a href="/browse/justice">Crime, justice and the law</a></li>
+          <li><a href="/browse/disabilities">Disabled people</a></li>
+          <li><a href="/browse/driving">Driving and transport</a></li>
+        </ul>
+        <ul>
+          <li><a href="/browse/education">Education and learning</a></li>
+          <li><a href="/browse/employing-people">Employing people</a></li>
+          <li><a href="/browse/environment-countryside">Environment and countryside</a></li>
+          <li><a href="/browse/housing-local-services">Housing and local services</a></li>
+          <li><a href="/browse/tax">Money and tax</a></li>
+          <li><a href="/browse/abroad">Passports, travel and living abroad</a></li>
+          <li><a href="/browse/visas-immigration">Visas and immigration</a></li>
+          <li><a href="/browse/working">Working, jobs and pensions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-inside-government">
+        <h2>Departments and policy</h2>
+
+        <ul>
+          <li><a href="/government/how-government-works">How government works</a></li>
+          <li><a href="/government/organisations">Departments</a></li>
+          <li><a href="/world">Worldwide</a></li>
+          <li><a href="/government/policies">Policies</a></li>
+          <li><a href="/government/publications">Publications</a></li>
+          <li><a href="/government/announcements">Announcements</a></li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+
+
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+              <h2 class="visuallyhidden">Support links</h2>
+<ul>
+  <li><a href="/help">Help</a></li>
+  <li><a href="/help/cookies">Cookies</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/help/terms-conditions">Terms and conditions</a></li>
+  <li><a href="/cymraeg" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a></li>
+  <li>Built by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
+</li>
+</ul>
+
+
+
+            <div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+                <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+    <script src="https://assets.publishing.service.gov.uk/static/govuk-template-c4f303154d2a238bdda4d5cf1ebd8d4487822e4cbc3e4c83e743da869443ce72.js" crossorigin="anonymous" integrity="sha256-xPMDFU0qI4vdpNXPHr2NRIeCLky8PkyD50PahpRDznI="></script>
+
+      <script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-cb0decd18b4b0abbece3cfc180d9adc8e11dfa693cf34c2ff1ffcda86e725301.js" crossorigin="anonymous" integrity="sha256-yw3s0YtLCrvs48/BgNmtyOEd+mk880wv8f/NqG5yUwE="></script>
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-8ebb2100d4f59fb7e4eedb9c61672156ca92be731dc4a1ea6e9a7a218904e534.js" crossorigin="anonymous" integrity="sha256-jrshANT1n7fk7tucYWchVsqSvnMdxKHqbpp6IYkE5TQ="></script>
+<script src="https://assets.publishing.service.gov.uk/static/surveys-8bfddec9d8aa8530dbad519c47440577d01ae78b506a9f2025a01f4f9ee807c4.js" crossorigin="anonymous" integrity="sha256-i/3eydiqhTDbrVGcR0QFd9Aa54tQap8gJaAfT57oB8Q="></script>
+
+
+
+    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+  <script src="https://assets.publishing.service.gov.uk/manuals-frontend/application-0af8ed042ac86b3a61689df6c4402d5feebe196670a93fbf6e4bb58d6ea3ee4c.js"></script>
+</body>
+</html>
