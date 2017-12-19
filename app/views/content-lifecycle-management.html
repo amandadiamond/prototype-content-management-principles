@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
+<!--<![endif]-->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>
+      Content lifecycle management - GOV.UK
+  </title>
+
+    <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-2775f99eaec64ff8121bfbfb3eb67b0c2b4b7c3fc78d25da30e12db2a09d30d6.css" crossorigin="anonymous" integrity="sha256-J3X5nq7GT/gSG/v7PrZ7DCtLfD/HjSXaMOEtsqCdMNY=">
+<!--<![endif]-->
+    <!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie6-5bb08c355a12ac38b0ac9d2446da122ec0f81c78e02dcd2a98766f53c23793c8.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie7-be1ea757827710f20eae59ae3ebfd172b7dbeabb171a79945ba610947eebb3cc.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/govuk-template-ie8-5ab4d0c7b42f2bf10f8c7aadf331a11f7399be832b0ee2c68c94071195a1e36e.css" /><![endif]-->
+    <link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/govuk-template-print-1076519521c2fffbbf75ab3b0d3b32ee2d96ac7e9778f1cdfac1771eefd1a1c0.css" crossorigin="anonymous" integrity="sha256-EHZRlSHC//u/das7DTsy7i2WrH6XePHN+sF3Hu/RocA=">
+
+    <!--[if IE 8]><link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-ie8-f5e3c18a96ecb0f37246556a27330202d6e18feffa05a3b67825024609629ac8.css" /><![endif]-->
+    <!--[if gte IE 9]><!--><link rel="stylesheet" media="all" href="https://assets.publishing.service.gov.uk/static/fonts-5ff8c53913434afd0072a480d7cfca67cace4c8d03f6ef96b78a4455728ce745.css" crossorigin="anonymous" integrity="sha256-X/jFORNDSv0AcqSA18/KZ8rOTI0D9u+Wt4pEVXKM50U=">
+<!--<![endif]-->
+    <!--[if lt IE 9]><script src="https://assets.publishing.service.gov.uk/static/ie-d31395a9030b68584b0a191af4b68cb7bef1bb6024898c719fb61241f9e18d0e.js" crossorigin="anonymous" integrity="sha256-0xOVqQMLaFhLChka9LaMt77xu2AkiYxxn7YSQfnhjQ4="></script><![endif]-->
+
+    <link rel="shortcut icon" href="https://assets.publishing.service.gov.uk/static/favicon-8d811b8c3badbc0b0e2f6e25d3660a96cc0cca7993e6f32e98785f205fc40907.ico" type="image/x-icon">
+    <link rel="mask-icon" href="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown-de738c3fcce8ce2a91b67e89787090dc24a5cda0275ab6b75f6226c5b9619d3d.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-180x180-ea1cbb1cbbeddfff275dfa6e8e46b84cd530892df79dc4882a8f99b802b49a90.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-167x167-181e404a50c572923285fb83f0fbd78da6b4e38e3ce52f8e6b8e29da8586450a.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-152x152-02457fcdcee8d309276305af2233d41bfb8fd055e855727d355e61bce7ffa9bb.png">
+    <link rel="apple-touch-icon" href="https://assets.publishing.service.gov.uk/static/apple-touch-icon-a318f305290c523aed80082456175b46c95350c0eeac93f42e78a71c7a55544e.png">
+
+    <meta name="theme-color" content="#0b0c0c">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://assets.publishing.service.gov.uk/static/opengraph-image-a1f7d89ffd0782738b1aeb0da37842d8bd0addbd724b8e58c3edbc7287cc11de.png">
+
+      <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-6432a80f7829cad510b2ebaae98fcc9ebe2e99561fff5a97ecc9c7d0cff21537.css" crossorigin="anonymous" integrity="sha256-ZDKoD3gpytUQsuuq6Y/Mnr4umVYf/1qX7MnH0M/yFTc=">
+<!--<![endif]-->
+<!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie6-dc8819787f616e63b05de96300a178b00a9aae74630ac4188329db03bf3d6b1e.css" /><script>var ieVersion = 6;</script><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie7-67473e60ee01211611f919664a9eff21f3a2307db0df87c0b285887010237109.css" /><script>var ieVersion = 7;</script><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-ie8-8cd16a38daba39516bfe4c4100c3143667ec6bbdee6c4404d320e596e6fee58e.css" /><script>var ieVersion = 8;</script><![endif]-->
+
+<link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/static/core-layout-print-774f7d274d27182a629690248f3d33de4aab74e12244f02483d1343c5f7f7265.css" crossorigin="anonymous" integrity="sha256-d099J00nGCpilpAkjz0z3kqrdOEiRPAkg9E0PF9/cmU=">
+
+
+  <!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government-frontend/application-7da5c3c89e49f3f06277116640f05642f301fbedf0d328b8486ddd4ee5892438.css" crossorigin="anonymous" integrity="sha256-faXDyJ5J8/BidxFmQPBWQvMB++3w0yi4SG3dTuWJJDg=">
+<!--<![endif]--><link rel="stylesheet" media="print" href="https://assets.publishing.service.gov.uk/government-frontend/print-9e52619a28f6d0ef9fb0a8b9d8fe0c4f2ff35d8dbb2d28db2d600b8bffcc4e9a.css" crossorigin="anonymous" integrity="sha256-nlJhmij20O+fsKi52P4MTy/zXY27LSjbLWALi//MTpo=">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="HHtcOq+xwIB3PiKnuQe6GYOPgHKEqW12swsp+9qdtvEB1NYOLFIFqk9K9O9r/WhJeb6pnW3gYGBUdLx/9AdZDQ==">
+<meta name="govuk:format" content="detailed_guide">
+<meta name="govuk:schema-name" content="detailed_guide">
+<meta name="govuk:analytics:organisations" content="&lt;OT1056&gt;">
+<meta name="govuk:political-status" content="non-political">
+<meta name="govuk:publishing-government" content="2010-to-2015-conservative-and-liberal-democrat-coalition-government">
+<meta name="govuk:user-journey-stage" content="thing">
+<meta name="govuk:navigation-document-type" content="guidance">
+<meta name="govuk:content-has-history" content="true">
+<meta name="description" content="Why its important to maintain content throughout its lifecycle">
+<meta name="govuk:content-id" content="84f02810-f04a-4454-b09e-b585af0489a3">
+<!--[if IE 6]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government-frontend/application-ie6-1d24cdcaf47675dbf0894f007d912c77d6f64bfc63576eb949569123387c886a.css" /><script>var ieVersion = 6;</script><![endif]--><!--[if IE 7]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government-frontend/application-ie7-1d24cdcaf47675dbf0894f007d912c77d6f64bfc63576eb949569123387c886a.css" /><script>var ieVersion = 7;</script><![endif]--><!--[if IE 8]><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government-frontend/application-ie8-66e025f56d09c0cb9a0b29032c8913065890bbe80d46d4964741b7fcdf98d9d7.css" /><script>var ieVersion = 8;</script><![endif]--><meta name="govuk:rendering-application" content="government-frontend">
+</head>
+
+  <body>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+    <div id="skiplink-container">
+      <div>
+        <a href="#content" class="skiplink">Skip to main content</a>
+      </div>
+    </div>
+
+    <div id="global-cookie-message">
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+    </div>
+
+    <header role="banner" id="global-header" class=" with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.gov.uk" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="https://assets.publishing.service.gov.uk/static/gov.uk_logotype_crown_invert_trans-203e1db49d3eff430d7dc450ce723c1002542fe1d2bce661b6d8571f14c1043c.png" width="36" height="32" alt=""> GOV.UK
+            </a>
+          </div>
+            <a href="#search" class="search-toggle js-header-toggle">Search</a>
+
+  <form id="search" class="site-search" action="/search" method="get" role="search">
+    <div class="content">
+      <label for="site-search-text">Search</label>
+      <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
+      <input class="submit" type="submit" value="Search">
+    </div>
+  </form>
+
+        </div>
+
+      <div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+  <nav id="proposition-menu" class="no-proposition-name">
+  <ul id="proposition-links">
+    <li>
+      <a class="" href="/government/organisations">
+        Departments
+      </a>
+    </li>
+    <li>
+      <a class="" href="/government/world">
+        Worldwide
+      </a>
+    </li>
+    <li>
+      <a class="" href="/government/how-government-works">
+        How government works
+      </a>
+    </li>
+    <li>
+      <a class="" href="/government/get-involved">
+        Get involved
+      </a>
+    </li>
+    <li class="clear-child">
+      <a class="" href="/government/policies">
+        Policies
+      </a>
+    </li>
+    <li>
+      <a class="" href="/government/publications">
+        Publications
+      </a>
+    </li>
+    <li>
+      <a class="" href="/government/publications?publication_filter_option=consultations">
+        Consultations
+      </a>
+    </li>
+    <li>
+      <a class="" href="/government/statistics">
+        Statistics
+      </a>
+    </li>
+    <li>
+      <a class="" href="/government/announcements">
+        Announcements
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>
+</div>
+</div>
+    </header>
+
+      <div id="user-satisfaction-survey-container"></div>
+
+
+    <div id="global-header-bar"></div>
+
+      <div id="wrapper" class="direction-ltr">
+
+
+<div class="govuk-breadcrumbs " data-module="track-click">
+  <ol>
+
+    <li class="">
+        <a data-track-category="breadcrumbClicked" data-track-action="1" data-track-label="/" data-track-options='{"dimension28":"1","dimension29":"Home"}' class="" aria-current="false" href="/">Home</a>
+    </li>
+  </ol>
+</div>
+
+
+    <main role="main" id="content" class="detailed-guide" lang="en">
+      <div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="pub-c-title
+
+  pub-c-title--bottom-margin">
+    <p class="pub-c-title__context">
+      Guidance
+    </p>
+  <h1 class="pub-c-title__text pub-c-title__text--long">
+  Content lifecycle management
+  </h1>
+</div>
+
+  </div>
+  <div class="column-third">
+
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="govuk-metadata direction-ltr" data-module="toggle">
+  <dl data-module="track-click">
+      <dt>From:</dt>
+      <dd>
+          <a href="/government/organisations/government-digital-service">Government Digital Service</a>
+
+      </dd>
+      <dt>Published:</dt>
+      <dd>3 April 2012</dd>
+  </dl>
+</div>
+
+  </div>
+</div>
+
+
+  <p class="pub-c-lead-paragraph">
+    Why it's important to maintain content throughout its lifecycle.
+  </p>
+
+
+<div class="grid-row sidebar-with-body" data-module="sticky-element-container" id="contents">
+    <div class="column-third">
+        <nav role="navigation" class="app-c-contents-list">
+    <h2>
+      Contents
+    </h2>
+    <ol class="app-c-contents-list__list">
+        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+          <a class="app-c-contents-list__link" href="#start-with-user-needs">
+            The lifecycle of content
+</a>        </li>
+        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+          <a class="app-c-contents-list__link" href="#do-less">
+            Why content needs to be maintained
+</a>        </li>
+        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+          <a class="app-c-contents-list__link" href="#design-with-data">
+            How to manage content
+</a>        </li>
+        <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+          <a class="app-c-contents-list__link" href="#do-the-hard-work-to-make-it-simple">
+            Effective content lifecycle management
+</a>        </li>
+
+    </ol>
+  </nav>
+
+    </div>
+  <div class="column-two-thirds ">
+
+<div class="govuk-govspeak direction-ltr">
+  <div class="govspeak">
+
+<p>Content lifecycle management is a process of continuous maintenance of your published content over its lifetime.</p>
+
+<p>Its purpose is to ensure content is regularly reviewed and improved to better meet user needs or is withdrawn or unpublished where necessary.</p>
+
+<p>Content lifecycle management means managing content after it’s been published, reviewing its performance and changing it accordingly.</p>
+
+<p>Content creation and management must follow the GOV.UK <a href="https://content-management-principles.herokuapp.com/content-principles">Content Management Principles.</a> </p>
+
+
+<h2 id="the-lifecycle-of-content">The lifecycle of content</h2>
+
+
+<p>All content has a lifecycle which starts before drafting and extends beyond publishing.</p>
+
+<p>Before you draft content, consider who it is for and why they need it. Content must meet a user need.</p>
+
+<p>Good content comes from collaboration between content sponsors - or subject matter experts - and content teams.</p>
+
+<p>Content should have a review date to prompt the content sponsor to assess if it’s still up to date and still needed.</p>
+
+<p>Once content no longer serves a need it should be withdrawn or unpublished - within the constraints of government need for transparency.</p>
+
+
+<h2 id="why-content-needs-to-be-maintained">Why content needs to be maintained</h2>
+
+<p>Content is part of the service GOV.UK provides to users. It needs to be maintained over its lifecycle like any other product or service.</p>
+
+<p>Maintaining content will make it more effective over the longer term. If content is not maintained, it will deteriorate.</p>
+
+<p>This can happen if content becomes outdated or if content doesn’t contain the relevant search terms.</p>
+
+<p>Part of effective content management is being fully aware of all your content and knowing when it needs to be updated, improved or removed.</p>
+
+<p>Publishing new content when the user need can be met by merging or updating existing content clutters the journey for users.</p>
+
+<p>It also pollutes search results making it hard for users to find the right content, misinforming or misleading them. </p>
+
+
+<h2 id="how-to-manage-content">How to manage content</h2>
+
+<h3> Audit priority content </h3>
+
+<p>To manage content, you first need to know how much you have and how it is performing.</p>
+
+<p>We have guidance on how to audit your content and how to use the GDS audit tool. (link to tool) </p>
+
+<h3> Monitor content performance </h3>
+
+<p>To monitor the performance of content over time, you will need to decide what metrics to assess your content against.</p>
+
+<p>These will depend on what you expect users to do with the content. </p>
+
+  <p> This is likely to vary from one content type to another. No single metric will be enough.</p>
+<p>
+  <a href="https://www.gov.uk/guidance/content-design/data-and-analytics">Read our guide to data and analytics.</a></p>
+
+<h2 id="effective-content-lifecycle-management">Effective content lifecycle management</h2>
+
+<h3>1. Change emphasis from publishing to managing</h3>
+
+<p>Place more emphasis on monitoring the performance of current content and iterating it instead of publishing new content.</p>
+
+<p>Publishing more content to fix problems with existing content is unwise because users will have difficulty finding the right content.</p>
+
+<h3>2. Get involved earlier</h3>
+
+<p>For content to genuinely meet users’ needs, policy and content colleagues need to have early discussions about the content and why it is needed.</p>
+
+<p>A <a href="/partnership-agreement.html">partnership agreement</a> between the content team and relevant parts of the organisation can help to achieve this.</p>
+
+<h3>3. Set up sustainable processes</h3>
+
+<p>Make sure you have the resources to monitor and improve your content. Setting up regular reviews of your content is the best way to monitor it.</p>
+
+<p>There are a few methods you may want to use to monitor content performance:
+
+<ul>
+  <li>rolling audit</li>
+<li><a href="https://www.gov.uk/service-manual/user-research">user research</a></li>
+<li><a href="https://www.gov.uk/guidance/content-design/data-and-analytics">web metrics, such as Google analytics</a></li>
+</ul>
+
+<p>You may find running a rolling audit in combination with user research provides the best results.</p>
+
+<h3>4. Set priorities</h3>
+<p>Priority should be given to monitoring and improving content that has the biggest impact on the greatest number of users.</p>
+
+<p>This might involve a service, its guidance and an explanation of policy - not just a single piece of content.</p>
+
+<p>To fulfil the task, a user may have to complete a journey through this content.</p>
+
+<p>Points in the journey where users drop out or revert to search can indicate a broken journey and should be addressed.</p>
+
+<h3>5. Establish use of user research and web analytics</h3>
+
+<p>Full access to and frequent use of user research and web analysis tools are essential to making evidence-based content decisions.</p>
+
+<p>Establish a schedule of research and analysis prioritising your most popular content.</p>
+
+
+<h3>6. Establish a content governance model</h3>
+
+<p>All content for GOV.UK should involve the content team.</p>
+
+<p>This means being involved from the content request and drafting stages through to publishing and post-publication management.</p>
+
+<p>The content team should make sure there is a content review <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/reviewing-and-approving-content">(or 2i) process</a> in place and plain English and GOV.UK style are enforced.</p>
+
+<p>The content team needs to establish a process for auditing and reviewing existing content with a view to improving it.</p>
+
+<p>Content should be withdrawn or unpublished if it no longer meets a need.</p>
+
+
+
+
+
+<div class="govuk-document-footer direction-ltr" data-module="track-click">
+  <h2 class="visuallyhidden">
+    Document information
+  </h2>
+  <div class="history-information" id="history">
+      <p>
+        Published:
+        <span class="published definition"> December 2017</span>
+      </p>
+  </div>
+  <div class="related-information">
+      <p>From: <span class="from">
+          <span class="definition">
+            <a href="/government/organisations/government-digital-service">Government Digital Service</a>
+          </span>
+      </span></p>
+  </div>
+</div>
+
+
+
+    </main>
+  <div class="report-a-problem-container">
+  <div class="report-a-problem-inner">
+    <div class="report-a-problem-content">
+      <h2>Help us improve GOV.UK</h2>
+      <form accept-charset="UTF-8" action="/contact/govuk/problem_reports" method="post">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+        <input id="url" name="url" type="hidden" value="https://www.gov.uk/guidance/government-design-principles">
+
+          <input id="source" name="source" type="hidden" value="">
+
+
+          <input id="page_owner" name="page_owner" type="hidden" value="">
+
+
+        <p>Don’t include personal or financial information like your National Insurance number or credit card details.</p>
+
+        <label for="what_doing">What you were doing</label>
+        <input id="what_doing" name="what_doing" type="text">
+
+        <label for="what_wrong">What went wrong</label>
+        <input id="what_wrong" name="what_wrong" type="text">
+
+        <div class="button-wrapper">
+          <button name="commit" type="submit" class="button">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+
+      <div class="footer-wrapper">
+            <div class="footer-categories">
+      <div class="footer-explore">
+        <h2>Services and information</h2>
+
+        <ul>
+          <li><a href="/browse/benefits">Benefits</a></li>
+          <li><a href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a></li>
+          <li><a href="/browse/business">Business and self-employed</a></li>
+          <li><a href="/browse/childcare-parenting">Childcare and parenting</a></li>
+          <li><a href="/browse/citizenship">Citizenship and living in the UK</a></li>
+          <li><a href="/browse/justice">Crime, justice and the law</a></li>
+          <li><a href="/browse/disabilities">Disabled people</a></li>
+          <li><a href="/browse/driving">Driving and transport</a></li>
+        </ul>
+        <ul>
+          <li><a href="/browse/education">Education and learning</a></li>
+          <li><a href="/browse/employing-people">Employing people</a></li>
+          <li><a href="/browse/environment-countryside">Environment and countryside</a></li>
+          <li><a href="/browse/housing-local-services">Housing and local services</a></li>
+          <li><a href="/browse/tax">Money and tax</a></li>
+          <li><a href="/browse/abroad">Passports, travel and living abroad</a></li>
+          <li><a href="/browse/visas-immigration">Visas and immigration</a></li>
+          <li><a href="/browse/working">Working, jobs and pensions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-inside-government">
+        <h2>Departments and policy</h2>
+
+        <ul>
+          <li><a href="/government/how-government-works">How government works</a></li>
+          <li><a href="/government/organisations">Departments</a></li>
+          <li><a href="/world">Worldwide</a></li>
+          <li><a href="/government/policies">Policies</a></li>
+          <li><a href="/government/publications">Publications</a></li>
+          <li><a href="/government/announcements">Announcements</a></li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+
+
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+              <h2 class="visuallyhidden">Support links</h2>
+<ul>
+  <li><a href="/help">Help</a></li>
+  <li><a href="/help/cookies">Cookies</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/help/terms-conditions">Terms and conditions</a></li>
+  <li><a href="/cymraeg" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a></li>
+  <li>Built by the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>
+</li>
+</ul>
+
+
+
+            <div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+                <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+    <script src="https://assets.publishing.service.gov.uk/static/govuk-template-d4ba5ab8f60c9df5c733e7d3c7c469ff93dc6b64d2b2a8feb94afa8f77c66193.js" crossorigin="anonymous" integrity="sha256-1LpauPYMnfXHM+fTx8Rp/5Pca2TSsqj+uUr6j3fGYZM="></script>
+
+      <script src="https://assets.publishing.service.gov.uk/static/libs/jquery/jquery-1.12.4-395e36e8b50840dbe9f754bd87c5098de66e33f81061d9452420dbdb9ee760f1.js" crossorigin="anonymous" integrity="sha256-OV426LUIQNvp91S9h8UJjeZuM/gQYdlFJCDb257nYPE="></script>
+<script src="https://assets.publishing.service.gov.uk/static/header-footer-only-f064d14bd8bdbd0247972b404350af141b2daef30ee6570edc003e15d5aea5e2.js" crossorigin="anonymous" integrity="sha256-8GTRS9i9vQJHlytAQ1CvFBstrvMO5lcO3AA+FdWupeI="></script>
+<script src="https://assets.publishing.service.gov.uk/static/surveys-b4d2c42a58bec8f6d153a702ea9164489c281c29ef63f3631ebb87dfa3562d78.js" crossorigin="anonymous" integrity="sha256-tNLEKli+yPbRU6cC6pFkSJwoHCnvY/NjHruH36NWLXg="></script>
+
+
+
+    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+  <script src="https://assets.publishing.service.gov.uk/government-frontend/application-b6af057ac563794cd9a306086ff7e990546cebe83309153e4e2bb7763c141cd9.js" crossorigin="anonymous" integrity="sha256-tq8FesVjeUzZowYIb/fpkFRs6+gzCRU+Tiu3djwUHNk="></script>
+</body>
+</html>
